@@ -98,6 +98,32 @@
   .jsonblock{font-family:var(--mono);font-size:max(11px,.78vw);line-height:1.6;padding:1.8vh 1.4vw;border:1px solid rgba(127,127,127,.3);opacity:.85;white-space:pre}
   .lbl{font-family:var(--mono);font-size:max(10px,.78vw);letter-spacing:.24em;text-transform:uppercase;opacity:.55;margin-bottom:1.2vh}
 
+  /* ============ 竖向流程图（P6 系统页） ============ */
+  .flow{display:flex;flex-direction:column;align-items:stretch;gap:0;flex:0 0 auto;min-height:0}
+  .fnode{display:grid;grid-template-columns:auto 1fr;column-gap:1.4vw;align-items:center;padding:.82vh 1.6vw;border:1px solid rgba(127,127,127,.28);border-radius:5px}
+  .slide.light .fnode{background:rgba(var(--ink-rgb),.035)}
+  .slide.dark .fnode{background:rgba(var(--paper-rgb),.05)}
+  .fnode .num{font-family:var(--serif-en);font-weight:700;font-style:italic;font-size:max(16px,1.55vw);line-height:1;opacity:.34;width:1.5em;text-align:center;font-feature-settings:"tnum"}
+  .fnode .fbody{min-width:0}
+  .fnode .ft{font-family:var(--sans-zh);font-weight:700;font-size:max(13px,1.28vw);line-height:1.16;letter-spacing:.005em}
+  .fnode .fd{font-family:var(--sans-zh);font-weight:400;font-size:max(11px,.92vw);line-height:1.3;opacity:.72;margin-top:.3vh}
+  .fnode.final{border-color:currentColor;border-width:1.5px}
+  .slide.light .fnode.final{background:rgba(var(--ink-rgb),.07)}
+  .slide.dark .fnode.final{background:rgba(var(--paper-rgb),.09)}
+  .farrow{display:flex;justify-content:center;align-items:center;height:1.15vh}
+  .farrow svg{width:1.3vw;height:1.3vw;min-width:13px;min-height:13px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.42}
+
+  /* ============ 技术栈页（左右两栏） ============ */
+  .storystep{display:grid;grid-template-columns:auto 1fr;column-gap:1.2vw;align-items:start;padding:1.4vh 0;border-top:1px solid rgba(127,127,127,.24)}
+  .storystep:first-child{border-top:0;padding-top:.4vh}
+  .storystep .sn{font-family:var(--serif-en);font-weight:700;font-style:italic;font-size:max(15px,1.5vw);line-height:1;opacity:.4;font-feature-settings:"tnum"}
+  .storystep .st{font-family:var(--sans-zh);font-weight:700;font-size:max(13px,1.12vw);line-height:1.3;letter-spacing:.005em}
+  .storystep .st b{font-weight:700}
+  .stackrow{display:grid;grid-template-columns:auto 1fr;column-gap:1.2vw;align-items:baseline;padding:1.15vh 0;border-top:1px solid rgba(127,127,127,.24)}
+  .stackrow:first-of-type{border-top:0}
+  .stackrow .sk{font-family:var(--mono);font-weight:500;font-size:max(12px,.98vw);letter-spacing:.02em;white-space:nowrap}
+  .stackrow .sv{font-family:var(--sans-zh);font-weight:400;font-size:max(11px,.94vw);line-height:1.36;opacity:.76}
+
   #nav{position:fixed;left:50%;bottom:2.6vh;transform:translateX(-50%);z-index:30;display:flex;gap:10px;padding:8px 14px;border-radius:999px;background:rgba(0,0,0,.18);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
   #nav .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3);cursor:pointer;transition:all .3s ease;border:0;padding:0}
   #nav .dot:hover{background:rgba(255,255,255,.5);transform:scale(1.15)}
@@ -207,7 +233,7 @@
 <section class="slide hero dark">
   <div class="chrome">
     <div>Team Briefing · 2026.07</div>
-    <div>01 / 11</div>
+    <div>01 / 12</div>
   </div>
   <div class="frame" style="display:grid; gap:4vh; align-content:center; min-height:80vh">
     <div class="kicker" data-anim>飞书 AI 先锋未来人才大赛 · 影石命题</div>
@@ -227,7 +253,7 @@
 <section class="slide light">
   <div class="chrome">
     <div>The Game · 赛制</div>
-    <div>02 / 11</div>
+    <div>02 / 12</div>
   </div>
   <div class="frame" style="padding-top:5vh">
     <div class="kicker" data-anim>先说清楚，这是一场什么比赛。</div>
@@ -273,7 +299,7 @@
 <section class="slide dark">
   <div class="chrome">
     <div>The Why · 选题</div>
-    <div>03 / 11</div>
+    <div>03 / 12</div>
   </div>
   <div class="frame grid-2-6-6" style="padding-top:4vh; align-items:start">
     <div style="display:flex; flex-direction:column; gap:2.2vh">
@@ -316,7 +342,7 @@
 <section class="slide light">
   <div class="chrome">
     <div>The Client · 影石</div>
-    <div>04 / 11</div>
+    <div>04 / 12</div>
   </div>
   <div class="frame" style="padding-top:4vh">
     <div class="kicker" data-anim>出题的人是谁。</div>
@@ -360,7 +386,7 @@
 <section class="slide dark">
   <div class="chrome">
     <div>The Problem · 命题</div>
-    <div>05 / 11</div>
+    <div>05 / 12</div>
   </div>
   <div class="frame grid-2-6-6" style="padding-top:4vh">
     <div style="display:flex; flex-direction:column; gap:2.4vh">
@@ -400,45 +426,83 @@
   </div>
 </section>
 
-<!-- P6 · 系统 · light -->
+<!-- P6 · 系统 · 竖向流程图 · light -->
 <section class="slide light">
   <div class="chrome">
     <div>The System · 系统</div>
-    <div>06 / 11</div>
+    <div>06 / 12</div>
   </div>
-  <div class="frame" style="padding-top:4vh">
-    <div class="kicker" data-anim>我们造的东西，说人话。</div>
-    <h2 class="h-xl" style="font-size:4.6vw" data-anim>配置好，它自己干活</h2>
-    <p class="lead" style="margin-top:1.6vh; max-width:62vw" data-anim>
-      告诉它盯哪些平台、哪些圈子，之后它自动上网抓数据、自动分析，直接给出建议名单。人只做最后拍板。
-    </p>
-    <div class="pipeline-section">
-      <div class="pipeline-label">从配置到建议 · 全自动</div>
-      <div class="pipeline" data-cols="4">
-        <div class="step" data-anim>
-          <div class="step-nb">01</div>
-          <div class="step-title">配置一次</div>
-          <div class="step-desc">要盯的平台、垂类、关键词，RSS 或接口都行，写进一份配置</div>
+  <div class="frame" style="padding-top:2vh">
+    <div class="grid-2-8-4" style="align-items:end; margin-bottom:1.6vh">
+      <div>
+        <div class="kicker" data-anim style="margin-bottom:.7vh">一张图看懂它每天怎么干活。</div>
+        <h2 class="h-xl" style="font-size:3vw" data-anim>配置好，它自己跑一整天</h2>
+      </div>
+      <p class="body-zh" style="font-size:max(12px,.92vw); line-height:1.45; padding-bottom:.3vh" data-anim>
+        无人值守，从睡醒到交名单一条龙，人只做最后一步。
+      </p>
+    </div>
+
+    <div class="flow">
+      <div class="fnode" data-anim>
+        <div class="num">1</div>
+        <div class="fbody">
+          <div class="ft">每天 08:30 自动醒来</div>
+          <div class="fd">macOS 定时器，无人值守</div>
         </div>
-        <div class="step" data-anim>
-          <div class="step-nb">02</div>
-          <div class="step-title">自动抓取</div>
-          <div class="step-desc">定时上网把候选博主的公开数据拉回来，不用人管</div>
+      </div>
+      <div class="farrow" data-anim><svg viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6"/></svg></div>
+      <div class="fnode" data-anim>
+        <div class="num">2</div>
+        <div class="fbody">
+          <div class="ft">采集</div>
+          <div class="fd">刷新老频道资料，英西日搜索词发现新面孔（池子现 1106 个频道）</div>
         </div>
-        <div class="step" data-anim>
-          <div class="step-nb">03</div>
-          <div class="step-title">自动分析</div>
-          <div class="step-desc">按影石的选人眼光给所有候选人排序打分</div>
+      </div>
+      <div class="farrow" data-anim><svg viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6"/></svg></div>
+      <div class="fnode" data-anim>
+        <div class="num">3</div>
+        <div class="fbody">
+          <div class="ft">打分</div>
+          <div class="fd">语义匹配 70% + 粉丝规模甜点 18% + POV 标记 12%，全池重新排名</div>
         </div>
-        <div class="step" data-anim>
-          <div class="step-nb">04</div>
-          <div class="step-title">直接给建议</div>
-          <div class="step-desc">每个人附上为什么值得签、有什么风险，运营点头或摇头</div>
+      </div>
+      <div class="farrow" data-anim><svg viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6"/></svg></div>
+      <div class="fnode" data-anim>
+        <div class="num">4</div>
+        <div class="fbody">
+          <div class="ft">对比昨天</div>
+          <div class="fd">新进前 100，窜升超 200 位</div>
+        </div>
+      </div>
+      <div class="farrow" data-anim><svg viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6"/></svg></div>
+      <div class="fnode" data-anim>
+        <div class="num">5</div>
+        <div class="fbody">
+          <div class="ft">解释</div>
+          <div class="fd">本地模型精读头部候选，写推荐卡（值得签 &times;3 + 风险 + 首次合作切入点）</div>
+        </div>
+      </div>
+      <div class="farrow" data-anim><svg viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6"/></svg></div>
+      <div class="fnode" data-anim>
+        <div class="num">6</div>
+        <div class="fbody">
+          <div class="ft">推送</div>
+          <div class="fd">日报 + iMessage + CSV 多维表（下一步接飞书多维表格）</div>
+        </div>
+      </div>
+      <div class="farrow" data-anim><svg viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6"/></svg></div>
+      <div class="fnode final" data-anim>
+        <div class="num">7</div>
+        <div class="fbody">
+          <div class="ft">人工终审</div>
+          <div class="fd">运营决定联系谁，投放结果回流调参数</div>
         </div>
       </div>
     </div>
-    <div class="callout" style="margin-top:2.5vh; max-width:64vw" data-anim>
-      怎么证明它有用：我们把影石已经选过的人当标准答案，考它能不能盲选出来。下一页是成绩。
+
+    <div class="callout" style="margin-top:1.6vh; padding:1.3vh 1.6vw" data-anim>
+      <span style="font-size:max(12px,.95vw); line-height:1.45; display:block">打分标准从哪来：影石官方选人文章的逆向工程，全程不碰任何已合作达人名单。怎么证明它有用，下一页讲清楚。</span>
     </div>
   </div>
   <div class="foot">
@@ -447,11 +511,78 @@
   </div>
 </section>
 
-<!-- P7 · 4.6x 大字 · hero light -->
+<!-- P7 · 标准从哪来 · 技术栈 · dark -->
+<section class="slide dark">
+  <div class="chrome">
+    <div>Method &amp; Stack · 技术栈</div>
+    <div>07 / 12</div>
+  </div>
+  <div class="frame" style="padding-top:2.6vh">
+    <div style="margin-bottom:2.2vh">
+      <div class="kicker" data-anim style="margin-bottom:1vh">打分标准怎么来的，用什么搭的。</div>
+      <h2 class="h-xl" style="font-size:3.4vw" data-anim>标准从哪来，技术栈</h2>
+    </div>
+    <div class="grid-2-6-6" style="gap:2vw 4vw; align-items:start">
+
+      <div>
+        <div class="lbl" data-anim>算法怎么来的 · 三步</div>
+        <div class="storystep" data-anim>
+          <div class="sn">1</div>
+          <div class="st">读影石官方文章，就是<b>他们自己写的选人逻辑</b>。</div>
+        </div>
+        <div class="storystep" data-anim>
+          <div class="sn">2</div>
+          <div class="st">逆向出 6 个主题查询 + 中腰部规模甜点 + POV 标记，变成<b>可计算的打分标准</b>。</div>
+        </div>
+        <div class="storystep" data-anim>
+          <div class="sn">3</div>
+          <div class="st">盲测反验证：把 26 个已合作达人藏起来当考卷，打分前删掉一切品牌痕迹，看系统能不能自己把他们找回来，结果 <b>4.6 倍</b>于随机基线。</div>
+        </div>
+        <div class="callout" style="margin-top:2vh; padding:1.6vh 1.4vw" data-anim>
+          <span class="q-big" style="font-size:max(13px,1.12vw); line-height:1.4">标准不是从已合作达人身上提取的，那样等于作弊。26 人只用来当考卷答案。</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="lbl" data-anim>技术栈 · 组件与用途</div>
+        <div class="stackrow" data-anim>
+          <div class="sk">yt-dlp</div>
+          <div class="sv">开源采集工具，只拉公开频道资料，不下载视频</div>
+        </div>
+        <div class="stackrow" data-anim>
+          <div class="sk">bge-m3</div>
+          <div class="sv">本地 ollama，把频道文本变成语义向量算相似度</div>
+        </div>
+        <div class="stackrow" data-anim>
+          <div class="sk">python 标准库</div>
+          <div class="sv">打分与回测，零第三方依赖</div>
+        </div>
+        <div class="stackrow" data-anim>
+          <div class="sk">qwen3:8b</div>
+          <div class="sv">本地模型，精读候选写推荐卡</div>
+        </div>
+        <div class="stackrow" data-anim>
+          <div class="sk">launchd</div>
+          <div class="sv">macOS 定时器，每天 08:30 自动跑</div>
+        </div>
+        <div class="callout" style="margin-top:2vh; padding:1.4vh 1.4vw" data-anim>
+          <span style="font-size:max(12px,.96vw); line-height:1.45; display:block">全链路本地运行，零 API 成本，数据不出这台电脑。</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="foot">
+    <div>逆向官方标准，本地跑通</div>
+    <div>Method &amp; Stack</div>
+  </div>
+</section>
+
+<!-- P8 · 4.6x 大字 · hero light -->
 <section class="slide hero light">
   <div class="chrome">
     <div>The Proof · 盲测</div>
-    <div>07 / 11</div>
+    <div>08 / 12</div>
   </div>
   <div class="frame" style="display:grid; gap:3.6vh; align-content:center; min-height:80vh">
     <div class="kicker" data-anim>不是想法，是已经跑出来的结果。</div>
@@ -463,15 +594,15 @@
   </div>
   <div class="foot">
     <div>Blind Backtest · 2026.07</div>
-    <div>附录见 P09-P11</div>
+    <div>附录见 P10-P12</div>
   </div>
 </section>
 
-<!-- P8 · 报名时间表 · light -->
+<!-- P9 · 报名时间表 · light -->
 <section class="slide light">
   <div class="chrome">
     <div>Timeline · 时间表</div>
-    <div>08 / 11</div>
+    <div>09 / 12</div>
   </div>
   <div class="frame" style="padding-top:6vh">
     <div class="kicker" data-anim>报名时间表。</div>
@@ -505,11 +636,11 @@
   </div>
 </section>
 
-<!-- P9 · 附录A 盲测怎么考 · dark -->
+<!-- P10 · 附录A 盲测怎么考 · dark -->
 <section class="slide dark">
   <div class="chrome">
     <div>Appendix A · 考法</div>
-    <div>09 / 11</div>
+    <div>10 / 12</div>
   </div>
   <div class="frame" style="padding-top:3.2vh">
     <div class="kicker" data-anim>附录 · 盲测是怎么考的。</div>
@@ -548,11 +679,11 @@
   </div>
 </section>
 
-<!-- P10 · 附录B 真实榜单 · light -->
+<!-- P11 · 附录B 真实榜单 · light -->
 <section class="slide light">
   <div class="chrome">
     <div>Appendix B · 真实榜单</div>
-    <div>10 / 11</div>
+    <div>11 / 12</div>
   </div>
   <div class="frame grid-2-6-6" style="padding-top:4.5vh">
     <div>
@@ -602,11 +733,11 @@
   </div>
 </section>
 
-<!-- P11 · 附录C 答案卷 · dark -->
+<!-- P12 · 附录C 答案卷 · dark -->
 <section class="slide dark">
   <div class="chrome">
     <div>Appendix C · 全名单</div>
-    <div>11 / 11</div>
+    <div>12 / 12</div>
   </div>
   <div class="frame" style="padding-top:3vh">
     <div class="kicker" data-anim>26 个隐藏答案，一个不少，附上每位的合作证据。</div>
