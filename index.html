@@ -175,6 +175,46 @@
 
   .callout-src{display:block;margin-top:1.6vh;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.6}
 
+  /* ============ 三层雷达页（骨架页） ============ */
+  .tri{display:grid;grid-template-columns:repeat(3,1fr);gap:2.2vw;flex:1;align-content:center}
+  .tricol{display:flex;flex-direction:column;gap:1.2vh;padding:2.4vh 1.6vw;border:1px solid rgba(127,127,127,.28);border-radius:7px;position:relative}
+  .slide.dark .tricol{background:rgba(var(--paper-rgb),.045)}
+  .slide.light .tricol{background:rgba(var(--ink-rgb),.035)}
+  .tricol .tri-op{font-family:var(--serif-en);font-weight:700;font-style:italic;font-size:2.4vw;opacity:.28;line-height:1;position:absolute;top:1.4vh;right:1.2vw}
+  .tricol .tri-x{font-family:var(--serif-en);font-style:italic;font-size:1.1vw;letter-spacing:.06em;opacity:.5}
+  .tricol .tri-t{font-family:var(--serif-zh);font-weight:700;font-size:1.85vw;line-height:1.15}
+  .tricol .tri-s{font-family:var(--sans-zh);font-weight:400;font-size:max(12px,.92vw);line-height:1.5;opacity:.78}
+  .tricol .tri-m{font-family:var(--mono);font-size:max(10px,.74vw);letter-spacing:.06em;line-height:1.55;opacity:.7;margin-top:.4vh;white-space:normal}
+  .status{display:inline-flex;align-items:center;gap:.5em;font-family:var(--mono);font-size:max(9px,.66vw);letter-spacing:.14em;text-transform:uppercase;padding:.4vh .7vw;border-radius:999px;border:1px solid currentColor;opacity:.9;margin-top:auto;align-self:flex-start}
+  .status.live{opacity:1}
+  .status .dot{width:.5em;height:.5em;border-radius:50%;background:currentColor}
+
+  /* ============ 通用对比表（行业页/双平台页/删除实验页） ============ */
+  .cmp{width:100%;border-collapse:collapse;font-family:var(--sans-zh)}
+  .cmp th,.cmp td{text-align:left;padding:1.15vh 1.1vw;border-top:1px solid rgba(127,127,127,.24);vertical-align:top;line-height:1.42}
+  .cmp thead th{border-top:0;font-family:var(--mono);font-size:max(10px,.78vw);letter-spacing:.14em;text-transform:uppercase;opacity:.6;font-weight:500;padding-bottom:1.6vh}
+  .cmp td.rk{font-family:var(--serif-zh);font-weight:700;font-size:max(13px,1.05vw);white-space:nowrap}
+  .cmp td.cell{font-size:max(11px,.9vw);opacity:.82}
+  .cmp td.ours{font-size:max(11px,.92vw);font-weight:500}
+  .slide.dark .cmp col.ourcol,.slide.light .cmp col.ourcol{background:transparent}
+  .cmp .ours{position:relative}
+  .slide.dark .cmp td.ours{background:rgba(var(--paper-rgb),.06)}
+  .slide.light .cmp td.ours{background:rgba(var(--ink-rgb),.045)}
+  .verdict{font-family:var(--mono);font-size:max(10px,.76vw);letter-spacing:.08em;font-weight:600;white-space:nowrap}
+
+  /* ============ 冻结/生长 两池对照 ============ */
+  .twopool{display:grid;grid-template-columns:1fr 1fr;gap:2.4vw;flex:1;align-content:center}
+  .poolcard{display:flex;flex-direction:column;gap:1.4vh;padding:3vh 2vw;border-radius:7px;border:1px solid rgba(127,127,127,.3)}
+  .poolcard.frozen{border-style:solid}
+  .slide.dark .poolcard{background:rgba(var(--paper-rgb),.05)}
+  .slide.light .poolcard{background:rgba(var(--ink-rgb),.04)}
+  .poolcard .pc-h{display:flex;align-items:baseline;justify-content:space-between;gap:1vw}
+  .poolcard .pc-t{font-family:var(--serif-zh);font-weight:700;font-size:2vw;line-height:1.1}
+  .poolcard .pc-n{font-family:var(--serif-en);font-weight:800;font-size:3vw;line-height:.9;font-feature-settings:"tnum"}
+  .poolcard .pc-n .u{font-family:var(--serif-zh);font-weight:500;font-size:.34em;opacity:.7;margin-left:.12em}
+  .poolcard .pc-d{font-family:var(--sans-zh);font-weight:400;font-size:max(12px,.98vw);line-height:1.55;opacity:.8}
+  .poolcard .pc-tag{font-family:var(--mono);font-size:max(10px,.74vw);letter-spacing:.18em;text-transform:uppercase;opacity:.6}
+
   .chrome{font-family:var(--mono);font-size:max(11px,.78vw);letter-spacing:.2em;text-transform:uppercase;opacity:.62}
   .foot{font-family:var(--mono);font-size:max(11px,.78vw);letter-spacing:.18em;text-transform:uppercase;opacity:.5}
 
@@ -233,18 +273,18 @@
 <section class="slide hero dark">
   <div class="chrome">
     <div>Team Briefing · 2026.07</div>
-    <div>01 / 12</div>
+    <div>01 / 16</div>
   </div>
   <div class="frame" style="display:grid; gap:4vh; align-content:center; min-height:80vh">
     <div class="kicker" data-anim>飞书 AI 先锋未来人才大赛 · 影石命题</div>
     <h1 class="h-hero" data-anim>达人雷达</h1>
-    <h2 class="h-sub" data-anim>帮你寻找下一个创作者</h2>
+    <h2 class="h-sub" data-anim>找到下一个能引爆单品的创作者</h2>
     <div class="meta-row" data-anim>
       <span>Max</span><span>·</span><span>Creator Radar</span><span>·</span><span>报名截止 07.19</span>
     </div>
   </div>
   <div class="foot">
-    <div>十一页 · 五分钟读完</div>
+    <div>十六页 · 评委版</div>
     <div>— 2026 —</div>
   </div>
 </section>
@@ -253,7 +293,7 @@
 <section class="slide light">
   <div class="chrome">
     <div>The Game · 赛制</div>
-    <div>02 / 12</div>
+    <div>02 / 16</div>
   </div>
   <div class="frame" style="padding-top:5vh">
     <div class="kicker" data-anim>先说清楚，这是一场什么比赛。</div>
@@ -299,7 +339,7 @@
 <section class="slide dark">
   <div class="chrome">
     <div>The Why · 选题</div>
-    <div>03 / 12</div>
+    <div>03 / 16</div>
   </div>
   <div class="frame grid-2-6-6" style="padding-top:4vh; align-items:start">
     <div style="display:flex; flex-direction:column; gap:2.2vh">
@@ -342,7 +382,7 @@
 <section class="slide light">
   <div class="chrome">
     <div>The Client · 影石</div>
-    <div>04 / 12</div>
+    <div>04 / 16</div>
   </div>
   <div class="frame" style="padding-top:4vh">
     <div class="kicker" data-anim>出题的人是谁。</div>
@@ -386,7 +426,7 @@
 <section class="slide dark">
   <div class="chrome">
     <div>The Problem · 命题</div>
-    <div>05 / 12</div>
+    <div>05 / 16</div>
   </div>
   <div class="frame grid-2-6-6" style="padding-top:4vh">
     <div style="display:flex; flex-direction:column; gap:2.4vh">
@@ -426,11 +466,58 @@
   </div>
 </section>
 
-<!-- P6 · 系统 · 竖向流程图 · light -->
+<!-- P6 · 三层雷达（骨架页）· light -->
+<section class="slide light">
+  <div class="chrome">
+    <div>The Answer · 三层雷达</div>
+    <div>06 / 16</div>
+  </div>
+  <div class="frame" style="padding-top:2.6vh">
+    <div style="margin-bottom:1.8vh">
+      <div class="kicker" data-anim style="margin-bottom:.8vh">「下一个能引爆单品的人」拆成三个可验证的问题。</div>
+      <h2 class="h-xl" style="font-size:3.2vw" data-anim>找爆款候选，三层雷达</h2>
+    </div>
+    <div class="tri">
+      <div class="tricol" data-anim>
+        <div class="tri-op">01</div>
+        <div class="tri-x">是不是</div>
+        <div class="tri-t">对的人</div>
+        <div class="tri-s">品牌契合层。他拍的东西，是不是影石想要的那种人。</div>
+        <div class="tri-m">语义 70% + 规模甜点 18% + POV 标记 12%<br>冻结考试池盲测，前 5% 召回 4.6 倍随机基线，零样本</div>
+        <div class="status live"><span class="dot"></span>已验证</div>
+      </div>
+      <div class="tricol" data-anim>
+        <div class="tri-op">02</div>
+        <div class="tri-x">是不是</div>
+        <div class="tri-t">对的时机</div>
+        <div class="tri-s">起势检测层。他现在是不是正在起量，趁还没红先下注。</div>
+        <div class="tri-m">YouTube 官方 RSS 播放数据做爆款检测<br>v1 今日上线，每日快照攒增速，数据积累中</div>
+        <div class="status"><span class="dot"></span>v1 上线</div>
+      </div>
+      <div class="tricol" data-anim>
+        <div class="tri-op">03</div>
+        <div class="tri-x">敢不敢</div>
+        <div class="tri-t">被验证</div>
+        <div class="tri-s">预测记分板。推了谁，先记账，到期查他到底起没起。</div>
+        <div class="tri-m">每周一存名单含订阅基线，28 天后自动结算 跑赢/跑平/跑输<br>首份 07-07 已存档，08-04 自动开奖</div>
+        <div class="status"><span class="dot"></span>已开局</div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:1.8vh; padding:1.3vh 1.6vw" data-anim>
+      <span style="font-size:max(12px,.98vw); line-height:1.45; display:block">潜力 = 对的人 &times; 对的时机 &times; 敢被验证。第一层已经跑出成绩，后两层把推荐做成能打分复盘的预测，这是全套的差异点。接下来先讲第一层怎么落地、怎么证明。</span>
+    </div>
+  </div>
+  <div class="foot">
+    <div>潜力 = 对的人 × 对的时机 × 敢被验证</div>
+    <div>Three-Layer Radar</div>
+  </div>
+</section>
+
+<!-- P7 · 系统 · 竖向流程图 · light -->
 <section class="slide light">
   <div class="chrome">
     <div>The System · 系统</div>
-    <div>06 / 12</div>
+    <div>07 / 16</div>
   </div>
   <div class="frame" style="padding-top:2vh">
     <div class="grid-2-8-4" style="align-items:end; margin-bottom:1.6vh">
@@ -456,7 +543,7 @@
         <div class="num">2</div>
         <div class="fbody">
           <div class="ft">采集</div>
-          <div class="fd">刷新老频道资料，英西日搜索词发现新面孔（池子现 1106 个频道）</div>
+          <div class="fd">yt-dlp 拉元数据，多语言搜索词发现新面孔，每日快照先存后洗（生产池现 2400+ 频道）</div>
         </div>
       </div>
       <div class="farrow" data-anim><svg viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6"/></svg></div>
@@ -480,7 +567,7 @@
         <div class="num">5</div>
         <div class="fbody">
           <div class="ft">解释</div>
-          <div class="fd">本地模型精读头部候选，写推荐卡（值得签 &times;3 + 风险 + 首次合作切入点）</div>
+          <div class="fd">本地模型 qwen3:8b 精读头部候选，写推荐卡（值得签 &times;3 + 风险 + 首次合作切入点），8 条信号语义字典防瞎解释</div>
         </div>
       </div>
       <div class="farrow" data-anim><svg viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6"/></svg></div>
@@ -488,7 +575,7 @@
         <div class="num">6</div>
         <div class="fbody">
           <div class="ft">推送</div>
-          <div class="fd">日报 + iMessage + CSV 多维表（下一步接飞书多维表格）</div>
+          <div class="fd">日报 + 飞书多维表格（19 列）+ 飞书原生在线文档（50 份达人档案 + 总部主页互链）+ 通知</div>
         </div>
       </div>
       <div class="farrow" data-anim><svg viewBox="0 0 24 24"><path d="M12 4v16M6 14l6 6 6-6"/></svg></div>
@@ -502,7 +589,7 @@
     </div>
 
     <div class="callout" style="margin-top:1.6vh; padding:1.3vh 1.6vw" data-anim>
-      <span style="font-size:max(12px,.95vw); line-height:1.45; display:block">打分标准从哪来：影石官方选人文章的逆向工程，全程不碰任何已合作达人名单。怎么证明它有用，下一页讲清楚。</span>
+      <span style="font-size:max(12px,.95vw); line-height:1.45; display:block">打分标准从哪来：影石官方选人文章的逆向工程，全程不碰任何已合作达人名单。数据积累先存后洗，每日快照自动异地备份。评论采样带隐私红线，作者只存哈希前 8 位。怎么证明它有用，下一页讲清楚。</span>
     </div>
   </div>
   <div class="foot">
@@ -511,11 +598,11 @@
   </div>
 </section>
 
-<!-- P7 · 标准从哪来 · 技术栈 · dark -->
+<!-- P8 · 标准从哪来 · 技术栈 · dark -->
 <section class="slide dark">
   <div class="chrome">
     <div>Method &amp; Stack · 技术栈</div>
-    <div>07 / 12</div>
+    <div>08 / 16</div>
   </div>
   <div class="frame" style="padding-top:2.6vh">
     <div style="margin-bottom:2.2vh">
@@ -578,31 +665,182 @@
   </div>
 </section>
 
-<!-- P8 · 4.6x 大字 · hero light -->
+<!-- P9 · 4.6x 大字 · hero light -->
 <section class="slide hero light">
   <div class="chrome">
     <div>The Proof · 盲测</div>
-    <div>08 / 12</div>
+    <div>09 / 16</div>
   </div>
   <div class="frame" style="display:grid; gap:3.6vh; align-content:center; min-height:80vh">
     <div class="kicker" data-anim>不是想法，是已经跑出来的结果。</div>
     <div class="display" data-anim>4.6&times;</div>
     <h2 class="h-sub" data-anim>比瞎猜准 4.6 倍</h2>
     <p class="lead" style="max-width:60vw" data-anim>
-      我们把影石真实合作过的 26 位博主当标准答案藏进 1,085 个频道，机器在剃掉一切品牌痕迹后盲选，把标准答案以 4.6 倍于随机的密度排进了前 5%。细节在最后三页。
+      我们把影石真实合作过的 26 位博主当标准答案，藏进 1,106 个频道的冻结考试池，机器在剃掉一切品牌痕迹后盲选，把标准答案以 4.6 倍于随机的密度排进了前 5%（6/26 = 23%）。这条是第一层「对的人」的成绩单，评委 clone 仓库能原样复现。
     </p>
   </div>
   <div class="foot">
-    <div>Blind Backtest · 2026.07</div>
-    <div>附录见 P10-P12</div>
+    <div>Blind Backtest · official v1.2 · 2026.07</div>
+    <div>方法与产物见附录</div>
   </div>
 </section>
 
-<!-- P9 · 报名时间表 · light -->
+<!-- P10 · 两池分工（工程素养）· dark -->
+<section class="slide dark">
+  <div class="chrome">
+    <div>Discipline · 两池分工</div>
+    <div>10 / 16</div>
+  </div>
+  <div class="frame" style="padding-top:3vh">
+    <div style="margin-bottom:2vh">
+      <div class="kicker" data-anim style="margin-bottom:.8vh">同一份数据，为什么要拆成两个池子。</div>
+      <h2 class="h-xl" style="font-size:3.2vw" data-anim>考试池冻结，生产池生长</h2>
+    </div>
+    <div class="twopool">
+      <div class="poolcard frozen" data-anim>
+        <div class="pc-h">
+          <div class="pc-t">冻结考试池</div>
+          <div class="pc-tag">Read Only</div>
+        </div>
+        <div class="pc-n">1,106 <span class="u">频道 · 永不改动</span></div>
+        <div class="pc-d">26 个隐藏正例做标准答案，逐字节冻结并记 md5。所有对外官方指标只在这份池子上复现，保证评委下载后跑出的数字和这份材料一字不差。</div>
+        <div class="pc-tag" style="margin-top:auto">exam_pool_v1.jsonl · md5 校验</div>
+      </div>
+      <div class="poolcard" data-anim>
+        <div class="pc-h">
+          <div class="pc-t">生产池</div>
+          <div class="pc-tag">Every Day</div>
+        </div>
+        <div class="pc-n">2,400<span class="u">+ 频道 · 每天生长</span></div>
+        <div class="pc-d">采集器每天刷新加发现新面孔，只增不改，每日快照先存后洗、自动异地备份。它负责真找达人，不参与官方指标复现。</div>
+        <div class="pc-tag" style="margin-top:auto">creator_pool.jsonl · append-only</div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:2vh; padding:1.3vh 1.6vw" data-anim>
+      <span style="font-size:max(12px,.98vw); line-height:1.45; display:block">两池解耦是刻意的纪律：量指标的池子锁死，找人的池子生长，指标可复现和数据持续积累两件事互不打架。这套项目自带质检流水线，一个独立的内部试跑员从零 clone 就精确复现了 23% 和 32.4% 这两个官方数字，还顺手抓出「默认配置会误触发推送」的隐患排进修复。这样评委看到的每个数字都能自己跑一遍对上。</span>
+    </div>
+  </div>
+  <div class="foot">
+    <div>指标可复现，数据能生长</div>
+    <div>Frozen vs Growing</div>
+  </div>
+</section>
+
+<!-- P11 · 删除实验（敢删自己的东西）· light -->
+<section class="slide light">
+  <div class="chrome">
+    <div>Ablation · 删除实验</div>
+    <div>11 / 16</div>
+  </div>
+  <div class="frame" style="padding-top:2.8vh">
+    <div class="grid-2-8-4" style="align-items:end; margin-bottom:1.8vh">
+      <div>
+        <div class="kicker" data-anim style="margin-bottom:.7vh">每个部件，都被证明过删不得。</div>
+        <h2 class="h-xl" style="font-size:3vw" data-anim>我们敢删自己的东西</h2>
+      </div>
+      <p class="body-zh" style="font-size:max(12px,.92vw); line-height:1.45; padding-bottom:.3vh" data-anim>
+        10 个变体盲测裁判，逐个拆零件重跑，看成绩掉多少。
+      </p>
+    </div>
+    <table class="cmp" data-anim>
+      <colgroup><col style="width:26%"><col style="width:22%"><col style="width:22%"><col style="width:30%"></colgroup>
+      <thead><tr><th>拆掉哪个零件</th><th>前 5% 召回</th><th>正例中位百分位</th><th>判决</th></tr></thead>
+      <tbody>
+        <tr><td class="rk">完整引擎（对照）</td><td class="cell">23%</td><td class="cell">32.4%</td><td class="cell"><span class="verdict">基准</span></td></tr>
+        <tr><td class="rk">删甜点函数</td><td class="cell">4%</td><td class="cell">53.7%（≈随机）</td><td class="cell"><span class="verdict">龙骨 · 删了就塌</span></td></tr>
+        <tr><td class="rk">只留语义</td><td class="cell">4%</td><td class="cell">54.2%（≈随机）</td><td class="cell"><span class="verdict">单腿站不住</span></td></tr>
+        <tr><td class="rk">删平台标记</td><td class="cell">12%</td><td class="cell">30.8%</td><td class="cell"><span class="verdict">榜首聚光灯</span></td></tr>
+        <tr class="ours"><td class="rk ours">删 adventure_bold 主题</td><td class="ours">23%（不变）</td><td class="ours">略好</td><td class="ours"><span class="verdict">白重量 · 已删</span></td></tr>
+      </tbody>
+    </table>
+    <div class="grid-2-6-6" style="margin-top:1.8vh; gap:2vw 3vw; align-items:start">
+      <div class="callout" style="padding:1.3vh 1.4vw" data-anim>
+        <span style="font-size:max(12px,.96vw); line-height:1.45; display:block"><b>三信号是交互的，不是相加</b>：只语义 4%，加甜点到 12%，再加标记到 23%。是三脚架，缺一条腿另两条补不回来。</span>
+      </div>
+      <div class="callout" style="padding:1.3vh 1.4vw" data-anim>
+        <span style="font-size:max(12px,.96vw); line-height:1.45; display:block"><b>删了白重量，成绩不降反升</b>：adventure_bold 六格召回全不变，已删，六主题变五主题。删完这版官方 v1.2 相对基线前 20% 召回和中位百分位双改善，召回类全部持平无退化。删得掉的都删了，留下的都过过堂。</span>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div>9 种删法，7 种疼，1 种不疼已删，1 种存疑</div>
+    <div>Ablation · ABLATION.md</div>
+  </div>
+</section>
+
+<!-- P12 · 行业对比（差异定位）· dark -->
+<section class="slide dark">
+  <div class="chrome">
+    <div>The Field · 行业对比</div>
+    <div>12 / 16</div>
+  </div>
+  <div class="frame" style="padding-top:2.8vh">
+    <div style="margin-bottom:1.8vh">
+      <div class="kicker" data-anim style="margin-bottom:.8vh">同行都很强，我们站在他们没站的位置。</div>
+      <h2 class="h-xl" style="font-size:3vw" data-anim>和行业主流的差异定位</h2>
+    </div>
+    <table class="cmp" data-anim>
+      <colgroup><col style="width:22%"><col style="width:40%"><col style="width:38%"></colgroup>
+      <thead><tr><th>这件事</th><th>行业主流（CreatorIQ / Modash / 星图 等）</th><th class="ours">达人雷达</th></tr></thead>
+      <tbody>
+        <tr><td class="rk">怎么选人</td><td class="cell">大规模存量达人库检索，粉丝画像加黑箱质量分</td><td class="ours">品牌语义零样本，从影石官方文本逆向出打分标准</td></tr>
+        <tr><td class="rk">找同类</td><td class="cell">lookalike：拿 CRM 里已成功的达人当种子找 30 个，算法不公开</td><td class="ours">种子可回溯到官方原话，可解释、可证伪、换品牌只换一份配置</td></tr>
+        <tr><td class="rk">发现方式</td><td class="cell">主要从库里已收录、多已上榜的达人里筛</td><td class="ours">主动发现还没红的下一个，多语言搜索词把新面孔捞进来</td></tr>
+        <tr><td class="rk">怎么证明准</td><td class="cell">对外只说「我们分很准」，没有一家公开验证方法</td><td class="ours">冻结考试池盲测 4.6 倍，外加可证伪的预测记分板</td></tr>
+      </tbody>
+    </table>
+    <div class="callout" style="margin-top:1.8vh; padding:1.3vh 1.6vw" data-anim>
+      <span style="font-size:max(12px,.98vw); line-height:1.45; display:block">同行的库更大、维度更全，这是他们的强项。我们不跟他们比库大，比的是三块他们没公开做的事：零样本盲测验证、语义逆向工程当监督信号、把推荐挂出来记分。扫遍 GitHub 和各家宣传材料，这三块目前没有公开先例。</span>
+    </div>
+  </div>
+  <div class="foot">
+    <div>不比库大，比可解释和可验证</div>
+    <div>Positioning</div>
+  </div>
+</section>
+
+<!-- P13 · 双平台（国内外）· light -->
+<section class="slide light">
+  <div class="chrome">
+    <div>Two Platforms · 双平台</div>
+    <div>13 / 16</div>
+  </div>
+  <div class="frame" style="padding-top:2.8vh">
+    <div style="margin-bottom:1.8vh">
+      <div class="kicker" data-anim style="margin-bottom:.8vh">同一个引擎，换一份配置就换一个平台。</div>
+      <h2 class="h-xl" style="font-size:3vw" data-anim>海外和国内，一套引擎两个平台</h2>
+    </div>
+    <div class="split" style="gap:3vw; align-items:stretch">
+      <div class="tricol" data-anim style="justify-content:flex-start">
+        <div class="tri-op">YT</div>
+        <div class="tri-t">YouTube · 海外侧</div>
+        <div class="tri-s">主战场，盲测成绩就在这条线上跑出来。</div>
+        <div class="tri-m">冻结考试池 1,106 频道 · 甜点峰值约 8 万粉<br>前 5% 召回 4.6 倍随机基线</div>
+        <div class="status live"><span class="dot"></span>已验证</div>
+      </div>
+      <div class="tricol" data-anim style="justify-content:flex-start">
+        <div class="tri-op">B站</div>
+        <div class="tri-t">B站 · 国内侧 v0</div>
+        <div class="tri-s">换一份中文 JSON 配置就切过来，引擎一行没改。</div>
+        <div class="tri-m">319 位 UP 主入池 · 甜点峰值约 50 万粉（中文生态上调）<br>自然发现案例：菜腿小崔，搜索词捞进来排 #3，不是手工塞的</div>
+        <div class="status"><span class="dot"></span>v0 上线</div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:1.8vh; padding:1.3vh 1.6vw" data-anim>
+      <span style="font-size:max(12px,.98vw); line-height:1.45; display:block">策略全外置在配置文件里，换品牌换平台只换一份 JSON，主题内核仍是影石官方选人逻辑。国内侧甜点峰值按中文生态上调到约 50 万粉，百万级顶流照样被压低，符合「发现下一个」而不是认名人。IG 和 TikTok 的适配器架构已经留好位，排 v2。</span>
+    </div>
+  </div>
+  <div class="foot">
+    <div>一套引擎，国内外双平台</div>
+    <div>One Engine · Two Platforms</div>
+  </div>
+</section>
+
+<!-- P14 · 报名时间表 · light -->
 <section class="slide light">
   <div class="chrome">
     <div>Timeline · 时间表</div>
-    <div>09 / 12</div>
+    <div>14 / 16</div>
   </div>
   <div class="frame" style="padding-top:6vh">
     <div class="kicker" data-anim>报名时间表。</div>
@@ -640,7 +878,7 @@
 <section class="slide dark">
   <div class="chrome">
     <div>Appendix A · 考法</div>
-    <div>10 / 12</div>
+    <div>15 / 16</div>
   </div>
   <div class="frame" style="padding-top:3.2vh">
     <div class="kicker" data-anim>附录 · 盲测是怎么考的。</div>
@@ -648,7 +886,7 @@
     <div>
       <div class="rowline" data-anim>
         <div class="k">藏答案</div>
-        <div class="v">26 位影石真实合作过的博主，混进 1,085 个频道里，机器不知道谁是谁</div>
+        <div class="v">26 位影石真实合作过的博主，混进 1,106 个频道的冻结考试池里，机器不知道谁是谁</div>
         <div class="m">Hide</div>
       </div>
       <div class="rowline" data-anim>
@@ -658,7 +896,7 @@
       </div>
       <div class="rowline" data-anim>
         <div class="k">看排名</div>
-        <div class="v">机器给 1,085 个频道排完序，翻开答案看这 26 位落在哪，越靠前越说明它懂影石要什么人</div>
+        <div class="v">机器给 1,106 个频道排完序，翻开答案看这 26 位落在哪，越靠前越说明它懂影石要什么人</div>
         <div class="m">Grade</div>
       </div>
     </div>
@@ -679,105 +917,81 @@
   </div>
 </section>
 
-<!-- P11 · 附录B 真实榜单 · light -->
+<!-- P16 · 附录B 真实榜单 + 答案卷 · light -->
 <section class="slide light">
   <div class="chrome">
     <div>Appendix B · 真实榜单</div>
-    <div>11 / 12</div>
+    <div>16 / 16</div>
   </div>
-  <div class="frame grid-2-6-6" style="padding-top:4.5vh">
+  <div class="frame grid-2-6-6" style="padding-top:3.8vh">
     <div>
       <div class="kicker" data-anim>机器排出的前 12 名，原样搬运。</div>
-      <div class="lbl" data-anim>Rank · 频道 · 订阅 · 得分（真实产物 backtest_scores.json）</div>
+      <div class="lbl" data-anim>Rank · 频道 · 订阅 · 得分（官方产物 backtest_scores.json）</div>
       <div data-anim class="tight">
-        <div class="data-row"><span class="dim">1</span><span class="nm">Murtanio</span><span>17.8万</span><span class="dim">.677</span></div>
-        <div class="data-row"><span class="dim">2</span><span class="nm">THE SHAIKH 96</span><span>7.9万</span><span class="dim">.667</span></div>
-        <div class="data-row"><span class="dim">3</span><span class="nm">Schaaf</span><span>21.7万</span><span class="dim">.659</span></div>
-        <div class="data-row"><span class="dim">4</span><span class="nm">STR1KEStudioz</span><span>3.3万</span><span class="dim">.650</span></div>
-        <div class="data-row"><span class="dim">5</span><span class="nm">RevLimits</span><span>14.9万</span><span class="dim">.647</span></div>
-        <div class="data-row"><span class="dim">6</span><span class="nm">MOTO WILD</span><span>37.6万</span><span class="dim">.645</span></div>
-        <div class="data-row"><span class="dim">7</span><span class="nm">RUSH_ in Tokyo</span><span>2.1万</span><span class="dim">.637</span></div>
-        <div class="data-row"><span class="dim">8</span><span class="nm">BRAAAPP - ONLY</span><span>1.4万</span><span class="dim">.633</span></div>
-        <div class="data-row"><span class="dim">9</span><span class="nm">Kzrunner</span><span>2.3万</span><span class="dim">.621</span></div>
-        <div class="data-row"><span class="dim">10</span><span class="nm">CoffeeHouseRiders</span><span>2.0万</span><span class="dim">.620</span></div>
-        <div class="data-row"><span class="dim">11</span><span class="nm">The Rice Rocketeer</span><span>5,760</span><span class="dim">.613</span></div>
-        <div class="data-row"><span class="dim">12</span><span class="nm">Scrambler POV</span><span>8.3万</span><span class="dim">.609</span></div>
+        <div class="data-row"><span class="dim">1</span><span class="nm">Murtanio</span><span>17.8万</span><span class="dim">.678</span></div>
+        <div class="data-row"><span class="dim">2</span><span class="nm">THE SHAIKH 96</span><span>8.0万</span><span class="dim">.662</span></div>
+        <div class="data-row"><span class="dim">3</span><span class="nm">Schaaf</span><span>21.7万</span><span class="dim">.660</span></div>
+        <div class="data-row"><span class="dim">4</span><span class="nm">STR1KEStudioz</span><span>3.3万</span><span class="dim">.649</span></div>
+        <div class="data-row"><span class="dim">5</span><span class="nm">RevLimits</span><span>14.9万</span><span class="dim">.643</span></div>
+        <div class="data-row"><span class="dim">6</span><span class="nm">RUSH_ in Tokyo</span><span>2.0万</span><span class="dim">.639</span></div>
+        <div class="data-row"><span class="dim">7</span><span class="nm">MOTO WILD</span><span>37.6万</span><span class="dim">.635</span></div>
+        <div class="data-row"><span class="dim">8</span><span class="nm">BRAAAPP - ONLY</span><span>1.4万</span><span class="dim">.631</span></div>
+        <div class="data-row"><span class="dim">9</span><span class="nm">Kzrunner</span><span>2.3万</span><span class="dim">.622</span></div>
+        <div class="data-row hit"><span class="star">★10</span><span class="nm">Tina Cohen O'Brien</span><span>7.3万</span><span class="dim">.619</span></div>
+        <div class="data-row"><span class="dim">11</span><span class="nm">CoffeeHouseRiders</span><span>2.0万</span><span class="dim">.615</span></div>
+        <div class="data-row"><span class="dim">12</span><span class="nm">The Rice Rocketeer</span><span>5,760</span><span class="dim">.610</span></div>
+      </div>
+      <div style="margin-top:2.2vh" data-anim>
+        <div class="lbl">成绩单原文 · backtest_metrics.json</div>
+        <div class="jsonblock" style="font-size:max(10px,.72vw)">"recall@top5%_all":   "6/26 = 23%"
+"recall@top10%_all":  "7/26 = 27%"
+"recall@top20%_all":  "11/26 = 42%"
+"median_pct_all":     "28.4%"
+"chance_baseline":    "top5%=5%"</div>
       </div>
     </div>
     <div>
-      <div class="kicker" data-anim>前 20 名里一个答案都没有，这是好事。</div>
-      <p class="body-zh" style="margin-bottom:2.4vh; font-size:max(13px,1vw)" data-anim>
-        榜首全是机器自己找出来的<b>新人选</b>，也就是影石今天就能用的第一页名单。真答案从第 21 名开始密集出现，前 5%（54 名内）塞进了 6 个：
+      <div class="kicker" data-anim>前 5%（55 名内）塞进 6 个真答案。</div>
+      <p class="body-zh" style="margin-bottom:1.6vh; font-size:max(12px,.98vw)" data-anim>
+        榜首多是机器自己找出来的<b>新人选</b>，也就是影石今天就能用的第一页名单。26 个隐藏答案一个不少，附每位的合作证据，巨星刻意沉底（引擎找下一个，不认名人）：
       </p>
-      <div data-anim>
-        <div class="data-row hit"><span class="star">★21</span><span class="nm">Lali</span><span>11.4万</span><span class="dim">前1.9%</span></div>
-        <div class="data-row hit"><span class="star">★23</span><span class="nm">Tina Cohen O'Brien</span><span>7.3万</span><span class="dim">前2.1%</span></div>
-        <div class="data-row hit"><span class="star">★31</span><span class="nm">RideWithRea</span><span>2.6万</span><span class="dim">前2.9%</span></div>
-        <div class="data-row hit"><span class="star">★32</span><span class="nm">Luis Gerstner</span><span>3.9万</span><span class="dim">前2.9%</span></div>
-        <div class="data-row hit"><span class="star">★44</span><span class="nm">Moto Feelz</span><span>12.6万</span><span class="dim">前4.1%</span></div>
-        <div class="data-row hit"><span class="star">★49</span><span class="nm">Jay Jankulovski</span><span>10.1万</span><span class="dim">前4.5%</span></div>
-      </div>
-      <div style="margin-top:2.6vh" data-anim>
-        <div class="lbl">成绩单原文 · backtest_metrics.json</div>
-        <div class="jsonblock" style="font-size:max(10px,.72vw)">"recall@top5%_all":     "6/26 = 23%"
-"recall@top10%_all":    "7/26 = 27%"
-"recall@top20%_all":    "8/26 = 31%"
-"median_pct_midtail":   "28.5%"
-"chance_baseline":      "top5%=5%"</div>
-      </div>
-    </div>
-  </div>
-  <div class="foot">
-    <div>完整 1,085 行排名在仓库 data/ 目录</div>
-    <div>Appendix B</div>
-  </div>
-</section>
-
-<!-- P12 · 附录C 答案卷 · dark -->
-<section class="slide dark">
-  <div class="chrome">
-    <div>Appendix C · 全名单</div>
-    <div>12 / 12</div>
-  </div>
-  <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>26 个隐藏答案，一个不少，附上每位的合作证据。</div>
-    <h2 class="h-xl" style="font-size:3.4vw; margin-bottom:1.4vh" data-anim>答案卷，原样公开</h2>
-    <div class="grid-2-6-6" style="gap:2vw 3vw">
-      <div data-anim class="tight">
-        <div class="data-row hit"><span class="star">★21</span><span class="nm">Lali</span><span class="dim">前1.9%</span><span class="dim">码 INRWKD2</span></div>
-        <div class="data-row hit"><span class="star">★23</span><span class="nm">Tina Cohen O'Brien</span><span class="dim">前2.1%</span><span class="dim">官方大使</span></div>
-        <div class="data-row hit"><span class="star">★31</span><span class="nm">RideWithRea</span><span class="dim">前2.9%</span><span class="dim">码 INRAUYR</span></div>
-        <div class="data-row hit"><span class="star">★32</span><span class="nm">Luis Gerstner</span><span class="dim">前2.9%</span><span class="dim">官方大使</span></div>
-        <div class="data-row hit"><span class="star">★44</span><span class="nm">Moto Feelz</span><span class="dim">前4.1%</span><span class="dim">#Sponsored+BMW联名</span></div>
-        <div class="data-row hit"><span class="star">★49</span><span class="nm">Jay Jankulovski</span><span class="dim">前4.5%</span><span class="dim">赞助声明</span></div>
-        <div class="data-row"><span class="dim">91</span><span class="nm">Two Wheel Cruise</span><span class="dim">前8.4%</span><span class="dim">赞助声明+码</span></div>
-        <div class="data-row"><span class="dim">204</span><span class="nm">Ride-Along w/ Cookie!</span><span class="dim">18.8%</span><span class="dim">码 INRTW2N</span></div>
-        <div class="data-row"><span class="dim">219</span><span class="nm">Musdaque Chowdhury</span><span class="dim">20.2%</span><span class="dim">大使声明</span></div>
-        <div class="data-row"><span class="dim">226</span><span class="nm">Nacho</span><span class="dim">20.8%</span><span class="dim">码 NACHO</span></div>
-        <div class="data-row"><span class="dim">275</span><span class="nm">The Loam Ranger</span><span class="dim">25.3%</span><span class="dim">专属联名链接</span></div>
-        <div class="data-row"><span class="dim">298</span><span class="nm">JORDAN HETRICK</span><span class="dim">27.5%</span><span class="dim">赞助声明</span></div>
-        <div class="data-row"><span class="dim">309</span><span class="nm">stan the moto man</span><span class="dim">28.5%</span><span class="dim">码 INRKGE6</span></div>
-      </div>
-      <div data-anim class="tight">
-        <div class="data-row"><span class="dim">351</span><span class="nm">Katie Kookaburra</span><span class="dim">32.4%</span><span class="dim">赞助声明+码</span></div>
-        <div class="data-row"><span class="dim">391</span><span class="nm">MountMedia</span><span class="dim">36.0%</span><span class="dim">码 INRNHMF</span></div>
-        <div class="data-row"><span class="dim">400</span><span class="nm">The Bag o' Tricks</span><span class="dim">36.9%</span><span class="dim">码 THEBOT</span></div>
-        <div class="data-row"><span class="dim">448</span><span class="nm">Robin Hannevig</span><span class="dim">41.3%</span><span class="dim">定制短链</span></div>
-        <div class="data-row"><span class="dim">484</span><span class="nm">Dale Stone</span><span class="dim">44.6%</span><span class="dim">官方 ft. 联动</span></div>
-        <div class="data-row"><span class="dim">486</span><span class="nm">Rest Day Rider</span><span class="dim">44.8%</span><span class="dim">专属码</span></div>
-        <div class="data-row"><span class="dim">578</span><span class="nm">Evans MTB Saga</span><span class="dim">53.3%</span><span class="dim">码 INR0MPN</span></div>
-        <div class="data-row"><span class="dim">618</span><span class="nm">Chaseontwowheels</span><span class="dim">57.0%</span><span class="dim">联盟短链</span></div>
-        <div class="data-row"><span class="dim">691</span><span class="nm">Joseph Activate</span><span class="dim">63.7%</span><span class="dim">大使声明</span></div>
-        <div class="data-row"><span class="dim">951</span><span class="nm">Anne Gumiran</span><span class="dim">87.6%</span><span class="dim">官方大使</span></div>
-        <div class="data-row"><span class="dim">973</span><span class="nm">Peter McKinnon</span><span class="dim">89.7%</span><span class="dim">官方大使</span></div>
-        <div class="data-row"><span class="dim">983</span><span class="nm">Fabio Wibmer</span><span class="dim">90.6%</span><span class="dim">官方大使</span></div>
-        <div class="data-row"><span class="dim">1075</span><span class="nm">CaseyNeistat</span><span class="dim">99.1%</span><span class="dim">官方大使</span></div>
+      <div class="grid-2-6-6" style="gap:1.4vw; align-items:start">
+        <div data-anim class="tight">
+          <div class="data-row hit"><span class="star">★10</span><span class="nm">Tina Cohen O'Brien</span><span class="dim">0.9%</span></div>
+          <div class="data-row hit"><span class="star">★22</span><span class="nm">Lali</span><span class="dim">2.0%</span></div>
+          <div class="data-row hit"><span class="star">★28</span><span class="nm">RideWithRea</span><span class="dim">2.5%</span></div>
+          <div class="data-row hit"><span class="star">★48</span><span class="nm">Moto Feelz</span><span class="dim">4.3%</span></div>
+          <div class="data-row hit"><span class="star">★49</span><span class="nm">Luis Gerstner</span><span class="dim">4.4%</span></div>
+          <div class="data-row hit"><span class="star">★53</span><span class="nm">Jay Jankulovski</span><span class="dim">4.8%</span></div>
+          <div class="data-row"><span class="dim">80</span><span class="nm">Two Wheel Cruise</span><span class="dim">7.2%</span></div>
+          <div class="data-row"><span class="dim">124</span><span class="nm">Ride-Along Cookie!</span><span class="dim">11.2%</span></div>
+          <div class="data-row"><span class="dim">148</span><span class="nm">The Bag o' Tricks</span><span class="dim">13.4%</span></div>
+          <div class="data-row"><span class="dim">187</span><span class="nm">JORDAN HETRICK</span><span class="dim">16.9%</span></div>
+          <div class="data-row"><span class="dim">212</span><span class="nm">Nacho</span><span class="dim">19.2%</span></div>
+          <div class="data-row"><span class="dim">274</span><span class="nm">Musdaque C.</span><span class="dim">24.8%</span></div>
+          <div class="data-row"><span class="dim">300</span><span class="nm">stan the moto man</span><span class="dim">27.1%</span></div>
+        </div>
+        <div data-anim class="tight">
+          <div class="data-row"><span class="dim">314</span><span class="nm">The Loam Ranger</span><span class="dim">28.4%</span></div>
+          <div class="data-row"><span class="dim">338</span><span class="nm">MountMedia</span><span class="dim">30.6%</span></div>
+          <div class="data-row"><span class="dim">354</span><span class="nm">Robin Hannevig</span><span class="dim">32.0%</span></div>
+          <div class="data-row"><span class="dim">390</span><span class="nm">Katie Kookaburra</span><span class="dim">35.3%</span></div>
+          <div class="data-row"><span class="dim">507</span><span class="nm">Rest Day Rider</span><span class="dim">45.8%</span></div>
+          <div class="data-row"><span class="dim">527</span><span class="nm">Dale Stone</span><span class="dim">47.6%</span></div>
+          <div class="data-row"><span class="dim">576</span><span class="nm">Chaseontwowheels</span><span class="dim">52.1%</span></div>
+          <div class="data-row"><span class="dim">604</span><span class="nm">Joseph Activate</span><span class="dim">54.6%</span></div>
+          <div class="data-row"><span class="dim">625</span><span class="nm">Evans MTB Saga</span><span class="dim">56.5%</span></div>
+          <div class="data-row"><span class="dim">922</span><span class="nm">Anne Gumiran</span><span class="dim">83.4%</span></div>
+          <div class="data-row"><span class="dim">950</span><span class="nm">Peter McKinnon</span><span class="dim">85.9%</span></div>
+          <div class="data-row"><span class="dim">1028</span><span class="nm">Fabio Wibmer</span><span class="dim">92.9%</span></div>
+          <div class="data-row"><span class="dim">1097</span><span class="nm">CaseyNeistat</span><span class="dim">99.2%</span></div>
+        </div>
       </div>
     </div>
   </div>
   <div class="foot">
-    <div>★=前5%命中 · 垫底四位是巨星，刻意沉底（引擎找下一个，不认名人）· 每位合作证据都留档可查</div>
-    <div>Appendix C · End</div>
+    <div>完整 1,106 行排名与合作证据在仓库 data/ 目录 · ★=前5%命中 · 垫底三位巨星刻意沉底</div>
+    <div>Appendix B · End</div>
   </div>
 </section>
 
